@@ -2,20 +2,23 @@
     text-align: center;
 }
 
+.bolding {
+    font-weight: bold;
+}
 
 nav {
     background-color: lightblue;
 }
 
 main {
-    min-height: 78vh;
+    min-height: 76vh;
     background-color: lightblue;
     padding-bottom: 25px;
 }
 
 footer {
-    height: 12vh;
-    line-height: 12vh;
+    height: 10vh;
+    line-height: 10vh;
     width: 100%;
 
     background-color: rgb(148, 191, 205);
