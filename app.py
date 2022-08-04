@@ -30,6 +30,14 @@ def create_app(test_config=None):
     @app.route('/topics')
     def topics():
         return render_template('topics.html')
+    
+    @app.route('/sources')
+    def sources():
+        return render_template('sources.html')
+
+    @app.route('/about')
+    def about():
+        return render_template('about.html')
 
     #potentially unnecessary
     import topicinfo, topicreview
