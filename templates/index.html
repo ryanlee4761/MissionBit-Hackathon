@@ -4,5 +4,8 @@
 
 {% block content %}
 <h2>Welcome to our site!</h2>
-<p>Our site is focused on teaching people how to recognize signs of mental illnesses and sexual abuse in their communities using interactive resources such as games, short quizzes, and articles. Navigate to our <a href="{{ url_for('topics') }}">topics page</a> to get started!</p>
+<img src="{{ url_for('static', filename='frontpage.png') }}" width="90%">
+<p>Our site is focused on teaching people how to recognize signs of mental illnesses and sexual abuse in their
+    communities using interactive resources such as games, short quizzes, and articles. Navigate to our <a
+        href="{{ url_for('topics') }}">topics page</a> to get started!</p>
 {% endblock %}
