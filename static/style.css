@@ -4,20 +4,19 @@
 
 
 nav {
-    min-height: 7vh;
     background-color: lightblue;
 }
 
 main {
     min-height: 78vh;
     background-color: lightblue;
+    padding-bottom: 25px;
 }
 
 footer {
+    height: 12vh;
+    line-height: 12vh;
     width: 100%;
-    min-height: 12vh;
-    position: fixed;
-    left: 0;
-    bottom: 0;
+
     background-color: rgb(148, 191, 205);
 }
