@@ -1,6 +1,4 @@
 import os
-from venv import create
-
 from flask import Flask, render_template
 
 def create_app(test_config=None):
@@ -39,6 +37,10 @@ def create_app(test_config=None):
     app.add_url_rule('/', endpoint='topicinfo')
     app.register_blueprint(topicreview.bp)
     app.add_url_rule('/', endpoint='topicgame')
+
+    @app.errorhandler(404)
+    def page_not_found(error):
+        return render_template('404.html'), 404
 
     return app
 
