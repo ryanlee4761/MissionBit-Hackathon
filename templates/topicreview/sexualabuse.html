@@ -4,4 +4,6 @@
 
 {% block content %}
 <h2>Sexual Abuse Review</h2>
+{{ super() }}
+<canvas data-processing-sources="{{ url_for('static', filename='Review_SA.pde') }}"></canvas>
 {% endblock %}
