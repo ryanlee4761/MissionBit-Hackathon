@@ -13,14 +13,17 @@
 </head>
 
 <body>
-    <nav>
+    <nav class="nav navbar-expand-lg navbar-light">
         <!-- Logo + Title h1 -->
-        <a href="{{url_for('index')}}"><img src="{{ url_for('static', filename='sailingbear.png') }}" width="50px"></a>
-        <ul>
-            <li><a href="  {{url_for('topics') }} ">Topics</a></li>
-            <li><a href="  {{url_for('sources') }} ">Sources</a></li>
-            <li><a href="  {{url_for('about') }} ">About Us</a></li>
-        </ul>
+        <a class="navbar-brand" href="{{url_for('index')}}"><img
+                src="{{ url_for('static', filename='sailingbear.png') }}" width="50px"></a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="  {{url_for('topics') }} ">Topics</a>
+                <a class="nav-item nav-link" href="  {{url_for('sources') }} ">Sources</a>
+                <a class="nav-item nav-link" href="  {{url_for('about') }} ">About Us</a>
+            </div>
+        </div>
     </nav>
     <main>
         {% block content %}{% endblock %}
