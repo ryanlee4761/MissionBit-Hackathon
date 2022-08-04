@@ -46,8 +46,11 @@ public void setup () {
 public void draw () {
   background(0);
   fill(255);
+  for(int i = 0; i < buttons.size(); i++)
+    if(buttons.get(i).getCorrect() == true)
+      buttons.remove(i);
   textSize(24);
-  text("Correct answers left:" + parseInt(buttons.size()-5), 300, 50); 
+  text("Correct answers left: " + parseInt(buttons.size()-5), 300, 50); 
 }
 
 public class myButton
@@ -57,6 +60,8 @@ public class myButton
   private String myText;
   private int myColor;
   private double myXspeed, myYspeed, radians;
+  
+  private boolean correct;
 
   public myButton (float xx, float yy, float w, float h, String text)
   {
@@ -66,6 +71,8 @@ public class myButton
     height = h;
     myText = text;
     myColor = color((int)(Math.random()*100+150), (int)(Math.random()*100+150), (int)(Math.random()*100+150));
+    
+    correct = false;
     
     radians = Math.random()*(Math.PI/180); //randomized
     myXspeed += Math.random()*1+1 + Math.cos(radians);
@@ -85,10 +92,11 @@ public class myButton
           System.out.println("incorrect button presssed"); //stop program
           fill(255,0,0); //red
           textSize(18);
-          text("Incorrect! This is a common misconception", 300, 50);
+          text("Incorrect! This is a common misconception", 300, 75);
           noLoop(); //stops program
         }
       }
+      correct = true;
     } else { 
       fill(myColor);
     }
@@ -114,5 +122,8 @@ public class myButton
   }
   public String getText() {
     return myText;
+  }
+  public boolean getCorrect(){
+    return correct;
   }
 }
