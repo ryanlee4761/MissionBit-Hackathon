@@ -2,9 +2,6 @@ import os
 
 from flask import Flask, render_template
 
-from . import topicreview
-
-
 def create_app(test_config=None):
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
@@ -36,7 +33,7 @@ def create_app(test_config=None):
         return render_template('topics.html')
 
     #potentially unnecessary
-    from . import topicinfo, topicreview
+    import topicinfo, topicreview
     app.register_blueprint(topicinfo.bp)
     app.add_url_rule('/', endpoint='topicinfo')
     app.register_blueprint(topicreview.bp)
