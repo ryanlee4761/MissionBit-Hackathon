@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
 
 {% block scriptp %}
+<script type="text/javascript" src="{{ url_for('static', filename='Guido.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='processing.js') }}"></script>
 {% endblock %}
 
 {% block content %}
 <h4>Instructions</h4>
 <p>Is it sexual assault/harassment when someone…?
-Click all the bubbles that apply. Careful! 4 are incorrect.
-If you mess up, reload the page to restart. 
-We recommend getting all 10 bubbles before you move on to the next page!</p>
+    Click all the bubbles that apply. Careful! 4 are incorrect.
+    If you mess up, reload the page to restart.
+    We recommend getting all 10 bubbles before you move on to the next page!</p>
 {% endblock %}
