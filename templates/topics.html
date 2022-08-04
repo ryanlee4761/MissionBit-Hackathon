@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% set navigation = [(url_for('topicinfo.test'), 'Test'), (url_for('topicinfo.sexualabuse'), 'Sexual Abuse')] %}
+
+{% block title %}Topics{% endblock %}
+
+{% block content %}
+<h2>Topics</h2>
+{% for item in navigation %}
+<li><a href="{{ item[0] }}">{{ item[1] }}</a></li>
+{% endfor %}
+{% endblock %}
