@@ -4,5 +4,6 @@
 
 {% block content %}
 <h2>Test review</h2>
+{{ super() }}
 <canvas data-processing-sources="{{ url_for('static', filename='test.pde') }}"></canvas>
 {% endblock %}
