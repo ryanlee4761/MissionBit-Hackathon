@@ -31,6 +31,10 @@ def create_app(test_config=None):
     def index():
         return render_template('index.html')
 
+    @app.route('/topics')
+    def topics():
+        return render_template('topics.html')
+
     #potentially unnecessary
     from . import topicinfo, topicreview
     app.register_blueprint(topicinfo.bp)
