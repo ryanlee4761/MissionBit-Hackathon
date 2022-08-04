@@ -1,4 +1,5 @@
 import os
+from venv import create
 
 from flask import Flask, render_template
 
@@ -40,3 +41,5 @@ def create_app(test_config=None):
     app.add_url_rule('/', endpoint='topicgame')
 
     return app
+
+app = create_app()
