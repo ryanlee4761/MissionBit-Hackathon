@@ -1,11 +1,23 @@
 * {
+    text-align: center;
+}
+
+
+nav {
+    min-height: 7vh;
     background-color: lightblue;
 }
 
-h2 {
-    text-align: center;
+main {
+    min-height: 78vh;
+    background-color: lightblue;
 }
 
-main {
-    text-align: center;
+footer {
+    width: 100%;
+    min-height: 12vh;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(148, 191, 205);
 }
