@@ -7,6 +7,10 @@ from flask import (
 
 bp = Blueprint('topicinfo', __name__, url_prefix='/topicinfo')
 
+@bp.route('/test', methods=('GET', 'POST'))
+def test():
+    return render_template('topicinfo/test.html')
+    
 @bp.route('/sexualabuse', methods=('GET', 'POST'))
 def sexualabuse():
     return render_template('topicinfo/sexualabuse.html')
